@@ -1,0 +1,14 @@
+relevance:
+  target_roles: ["Founding Engineer", "Software Engineer", "Full Stack Engineer", "ML Engineer", "AI Engineer"]
+  preferred_locations: ["London", "UK", "Remote", "Europe", "EU"]
+  preferred_stack: ["Python", "TypeScript", "Node.js", "React", "AWS", "LLM", "Next.js"]
+  exclude_seniority: ["CTO", "VP Engineering", "Director", "Head of Engineering"]
+  min_confidence: 0.70
+notify:
+  include_topic_title: true
+  include_jump_link: true
+  quiet_hours:
+    start: 23
+    end: 7
+
+

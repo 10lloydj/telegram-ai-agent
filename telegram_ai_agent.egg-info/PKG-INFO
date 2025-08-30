@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: telegram-ai-agent
+Version: 0.1.0
+Summary: Telegram Job Watcher (LLM-Driven) — Python + Telethon + Postgres
+Author: You
+Requires-Python: <3.14,>=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: telethon>=1.35.0
+Requires-Dist: SQLAlchemy>=2.0.25
+Requires-Dist: asyncpg>=0.29.0
+Requires-Dist: pydantic>=2.8.0
+Requires-Dist: tenacity>=8.2.0
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: PyYAML>=6.0.1
+Requires-Dist: openai>=1.40.0
+
+# telegram-ai-agent
