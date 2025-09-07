@@ -45,7 +45,7 @@ SYSTEM = (
     "    \"value\": string|null\n"
     "  }\n"
     "}\n"
-    "Decide relevance for a UK-based engineer (Python/TypeScript/AI, etc). Prefer London/UK/Remote/EU. "
+    "Decide relevance for a UK-based engineer/developer (Python/TypeScript/AI, etc). Prefer London/UK/Remote/EU. "
     "Exclude roles beyond IC scope (CTO/VP/Director). If uncertain, set is_relevant=false and lower confidence."
 )
 

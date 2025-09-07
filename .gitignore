@@ -13,3 +13,11 @@ __pycache__/
 
 # Temp files
 quick_login.py
+
+sniff_chat_id.py
+gen_session_string.py
+dump_dialog.py
+verify_chat_id.py
+
+# Backups
+backups/

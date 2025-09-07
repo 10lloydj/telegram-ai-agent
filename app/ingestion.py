@@ -32,7 +32,7 @@ async def _topic_title(client, chat, topic_id: int | None) -> str | None:
 
 def attach_listeners(client, Session, targets: list[int] | None = None):
     target_ids = targets or [int(os.environ["TARGET_CHAT_ID"])]
-    min_conf = float(os.getenv("MIN_CONFIDENCE", "0.70"))
+    min_conf = float(os.getenv("MIN_CONFIDENCE", "0.60"))
     self_user = os.getenv("SELF_USERNAME", "me")
     q_start = int(os.getenv("QUIET_HOURS_START", "22"))
     q_end = int(os.getenv("QUIET_HOURS_END", "8"))
