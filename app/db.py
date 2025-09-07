@@ -1,6 +1,10 @@
 import os
+from dotenv import load_dotenv
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker
+
+# Ensure environment is loaded
+load_dotenv()
 
 
 def _database_url() -> str:

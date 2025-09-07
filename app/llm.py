@@ -2,8 +2,12 @@ import os
 import json
 from typing import Any, Dict
 
+from dotenv import load_dotenv
 from tenacity import wait_exponential_jitter, stop_after_attempt, retry
 from openai import AsyncOpenAI
+
+# Ensure environment is loaded
+load_dotenv()
 
 from .schemas import Verdict
 
@@ -41,7 +45,7 @@ SYSTEM = (
     "    \"value\": string|null\n"
     "  }\n"
     "}\n"
-    "Decide relevance for a UK-based engineer (Python/TypeScript/AI). Prefer London/UK/Remote/EU. "
+    "Decide relevance for a UK-based engineer (Python/TypeScript/AI, etc). Prefer London/UK/Remote/EU. "
     "Exclude roles beyond IC scope (CTO/VP/Director). If uncertain, set is_relevant=false and lower confidence."
 )
 

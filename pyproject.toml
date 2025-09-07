@@ -17,7 +17,9 @@ dependencies = [
   "tenacity>=8.2.0",
   "python-dotenv>=1.0.1",
   "PyYAML>=6.0.1",
-  "openai>=1.40.0"
+  "openai>=1.40.0",
+  "pytz>=2023.3",
+  "greenlet>=2.0.0"
 ]
 
 [tool.setuptools.packages.find]

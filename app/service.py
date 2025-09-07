@@ -1,12 +1,15 @@
 import asyncio
 import os
 
+from dotenv import load_dotenv
 from telethon import TelegramClient
 
-from .db import engine
+# Load environment before importing other modules
+load_dotenv()
+
+from .db import engine, Session
 from .models import Base
 from .config import load_cfg
-
 
 cfg = load_cfg()
 
@@ -33,7 +36,15 @@ async def main() -> None:
         pass
 
     await client.start()
-    print("Agent running… (ingestion/notifier may be disabled)")
+    
+    # Attach message listeners
+    try:
+        from .ingestion import attach_listeners
+        attach_listeners(client, Session)
+        print("Agent running with ingestion/notifier enabled")
+    except Exception as e:
+        print(f"Agent running without ingestion: {e}")
+    
     await client.run_until_disconnected()
 
 
