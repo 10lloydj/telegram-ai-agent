@@ -48,12 +48,20 @@ python3 sniff_chat_id.py
 ```
 
 ### 5. Run the Agent
+
+**Local development:**
 ```bash
 # Start PostgreSQL
 docker compose up -d db
 
 # Run the agent
 python3 -m app
+```
+
+**Production deployment (VPS):**
+```bash
+# Deploy everything with one command
+./deploy.sh
 ```
 
 ## Configuration
@@ -76,6 +84,8 @@ OPENAI_API_KEY=sk-...
 MIN_CONFIDENCE=0.70
 QUIET_HOURS_START=23
 QUIET_HOURS_END=7
+# For Docker deployment:
+PG_HOST=db  # Use 'db' for Docker, 'localhost' for local
 ```
 
 ## How It Works
